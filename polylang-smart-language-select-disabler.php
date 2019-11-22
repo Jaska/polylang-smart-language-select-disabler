@@ -90,7 +90,7 @@ class PolylangSmartLanguageSelectDisabler {
             }
 
             /* Edit screens */
-            .wp-admin #post_lang_choice,
+            .wp-admin #pll_post_lang_choice,
             .wp-admin #term_lang_choice {
               display: none !important;
             }
@@ -140,7 +140,7 @@ class PolylangSmartLanguageSelectDisabler {
                   setTimeout(function() {
                     var lang_choice = document.getElementsByName('inline_lang_choice');
                     var lang_choice = lang_choice[0];
-                    var label =  lang_choice.options[ lang_choice.selectedIndex ].innerHTML
+                    var label =  lang_choice.options[ lang_choice.selectedIndex ].innerHTML;
                     polylang_addon_disable_language_select(lang_choice, label);
                   }, 5);
                 }
@@ -150,7 +150,7 @@ class PolylangSmartLanguageSelectDisabler {
               document.addEventListener('DOMContentLoaded', function() {
 
                 // posts
-                var post_lang_choice = document.getElementById('post_lang_choice');
+                var post_lang_choice = document.getElementById('pll_post_lang_choice');
                 polylang_addon_disable_language_select(post_lang_choice);
 
                 // terms
